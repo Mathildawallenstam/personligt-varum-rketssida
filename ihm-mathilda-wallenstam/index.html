@@ -27,9 +27,23 @@
 
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5W8PHR98');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5W8PHR98" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Sidhuvud & Navigation -->
     <header class="sidhuvud" id="sidhuvud">
         <div class="sidhuvud-behållare">
@@ -475,31 +489,23 @@
                 </div>
             </div>
 
-            <!-- Interaktivt snabbmeddelande-formulär -->
+            <!-- HubSpot-formulär -->
             <div class="kontakt-formular-kort">
                 <h3>Skicka ett snabbt meddelande</h3>
-                <form id="kontakt-formular" class="kontakt-formular">
-                    <div class="formular-rad">
-                        <div class="formular-falt">
-                            <label for="namn">Ditt namn</label>
-                            <input type="text" id="namn" name="namn" placeholder="T.ex. Anna Andersson" required>
-                        </div>
-                        <div class="formular-falt">
-                            <label for="epost">Din e-postadress</label>
-                            <input type="email" id="epost" name="epost" placeholder="anna@foretag.se" required>
-                        </div>
-                    </div>
-                    <div class="formular-falt">
-                        <label for="meddelande">Meddelande</label>
-                        <textarea id="meddelande" name="meddelande" rows="4"
-                            placeholder="Vad har du för spännande idé eller uppdrag?" required></textarea>
-                    </div>
-                    <button type="submit" class="knapp knapp-primar">Skicka meddelande</button>
-                    <p id="formular-status" class="formular-status" aria-live="polite"></p>
-                </form>
+                <div id="hubspot-formular" aria-label="Kontaktformulär"></div>
             </div>
         </section>
     </main>
+
+    <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
+    <script>
+        hbspt.forms.create({
+            region: "eu1",
+            portalId: "149565890",
+            formId: "283b322b-ca79-4510-975b-05ec03535180",
+            target: "#hubspot-formular"
+        });
+    </script>
 
     <!-- Sidfot -->
     <footer class="sidfot">
