@@ -124,31 +124,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", uppdateraAktivLank, { passive: true });
 
-    // ==========================================================================
-    // 5 · Snabbmeddelande-formulär (Feedback)
-    // ==========================================================================
-    const kontaktFormular = document.querySelector("#kontakt-formular");
-    const formularStatus = document.querySelector("#formular-status");
-
-    if (kontaktFormular) {
-        kontaktFormular.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const namnInput = document.querySelector("#namn");
-            const besokare = namnInput ? namnInput.value.trim() : "där";
-
-            if (formularStatus) {
-                formularStatus.textContent = `Tack ${besokare}! Ditt meddelande är mottaget. Jag återkommer inom kort.`;
-                formularStatus.classList.add("lyckades");
-            }
-
-            kontaktFormular.reset();
-
-            setTimeout(() => {
-                if (formularStatus) {
-                    formularStatus.textContent = "";
-                    formularStatus.classList.remove("lyckades");
-                }
-            }, 5000);
-        });
-    }
 });
