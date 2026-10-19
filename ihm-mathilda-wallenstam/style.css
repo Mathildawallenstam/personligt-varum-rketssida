@@ -1162,6 +1162,68 @@ main {
     gap: 1.25rem;
 }
 
+/* HubSpot-formuläret får samma visuella grund som övriga sidan. */
+#hubspot-formular .hs-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    margin-bottom: 1.25rem;
+}
+
+#hubspot-formular label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primar-mork);
+}
+
+#hubspot-formular input,
+#hubspot-formular textarea,
+#hubspot-formular select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.85rem 1rem;
+    font: inherit;
+    font-size: 1rem;
+    background: #ffffff;
+    border: 1.5px solid var(--kant);
+    border-radius: var(--radie-sm);
+    color: var(--text);
+}
+
+#hubspot-formular input:focus,
+#hubspot-formular textarea:focus,
+#hubspot-formular select:focus {
+    outline: none;
+    border-color: var(--kant-fokus);
+    box-shadow: 0 0 0 3px rgba(121, 79, 50, 0.15);
+}
+
+#hubspot-formular .hs-button {
+    appearance: none;
+    padding: 0.85rem 1.5rem;
+    font: inherit;
+    font-weight: 700;
+    color: #ffffff;
+    background: var(--primar-gradient);
+    border: 0;
+    border-radius: var(--radie-sm);
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(82, 54, 36, 0.28);
+}
+
+#hubspot-formular .hs-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(82, 54, 36, 0.38);
+}
+
+#hubspot-formular .hs-error-msgs {
+    margin: 0.35rem 0 0;
+    padding: 0;
+    color: #b42318;
+    font-size: 0.875rem;
+    list-style: none;
+}
+
 .formular-rad {
     display: grid;
     grid-template-columns: 1fr 1fr;
